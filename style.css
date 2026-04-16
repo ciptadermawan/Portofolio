@@ -1,0 +1,1092 @@
+/* --- GLOBAL FIXES --- */
+html {
+    /* Paksa scrollbar muncul agar konten tidak "lompat" saat pindah halaman */
+    overflow-y: scroll; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background-image: url('backgroundcip.png');
+    background-color: #2c2c2c; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+    overflow-x: hidden;
+}
+
+.hidden { display: none !important; }
+
+.container { 
+    width: 100%; 
+    max-width: 1200px; 
+    padding: 20px; 
+    margin: 0 auto; 
+    position: relative;
+    z-index: 1;
+}
+
+.profile-section { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    gap: 80px; 
+    margin-top: 20vh; 
+}
+
+.asset-portofolio {
+    position: absolute;   
+    top: 15px;            
+    left: 860px;
+    width: 380px;         
+    transform: rotate(21deg);
+    filter: drop-shadow(7px 7px 2px rgba(0,0,0,0.4)); 
+}
+
+.asset-panah1 {
+    position: absolute;   
+    top: 600px;            
+    left: 820px;
+    width: 4%;   
+    opacity: 0.4;      
+    filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.4)); 
+}
+
+
+.asset-panah2 {
+    position: absolute;  
+    transform: rotate(-46deg); 
+    top: 580px;            
+    left: 590px;
+    width: 4%;
+    opacity: 0.4;
+    filter: drop-shadow(4px 4px 2px rgba(0,0,0,0.4)); 
+}
+
+.photo-wrapper1 { position: relative; }
+
+.pin { 
+    position: absolute; 
+    top: -20px; 
+    right: -10px; 
+    width: 65px; 
+    z-index: 10; 
+    filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.6)); 
+}
+
+.final-photo { 
+    width: 280px; 
+    position: relative; 
+    z-index: 5; 
+    filter: drop-shadow(10px 15px 20px rgba(0, 0, 0, 0.7)); 
+    transform-origin: 260px 20px; 
+    animation: swingPhotos 4s ease-in-out infinite; 
+}
+/* profil */
+@keyframes swingPhotos { 
+    0%, 100% { transform: rotate(-9deg); } 
+    50% { transform: rotate(-3deg); } 
+}
+
+.info-wrapper { display: flex;
+                flex-direction:column;
+                gap: 15px;
+                letter-spacing: 2px;}
+
+.subtitle { font-size: 1.7rem; font-weight: 500; }
+.name { font-size: 3rem; font-weight: 700; letter-spacing: -1px; padding-bottom: 40px; }
+
+.contact-info { display: flex; flex-direction: column; gap: 18px; }
+.contact-item { display: flex; align-items: center; gap: 18px; font-size: 1.2rem; }
+.contact-item img { width: 30px; height: 30px; }
+
+.extra-assets { 
+    position: fixed; 
+    width: 100%; 
+    height: 100%; 
+    top: 0; 
+    left: 0; 
+    pointer-events: none; 
+    z-index: 5; 
+}
+
+.asset-balon { 
+    position: absolute; 
+    bottom: 15px; 
+    right: -200px; 
+    width: 700px; 
+    animation: floatBalon 6s ease-in-out infinite; 
+    z-index: 7;
+}
+
+@keyframes floatBalon { 
+    0%, 100% { transform: translateY(0px); } 
+    50% { transform: translateY(-30px); } 
+}
+
+.asset-bumi { 
+    position: absolute; 
+    bottom: -260px; 
+    right: -270px; 
+    width: 700px; 
+    animation: rotateBumi 20s linear infinite; 
+}
+
+@keyframes rotateBumi { 
+    from { transform: rotate(0deg); } 
+    to { transform: rotate(360deg); } 
+}
+
+.asset-desain { 
+    position: fixed; 
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100vw; 
+    height: 100vh; 
+    object-fit: cover; 
+    z-index: -1; 
+}
+
+/* --- ABOUT ME STYLE --- */
+#about-assets {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.about-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    padding: 60px 20px 150px 20px;
+}
+
+.asset-genesis {
+    display: block;       
+    margin: 0 auto;       
+    position: absolute;   
+    top: -40px;            
+    left: 0;
+    right: 0;              
+    width: 600px;          
+    
+    z-index: 10;          
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+}
+
+.asset-paku2 {
+    position: absolute;   
+    top: 265px;            
+    left: -70px;
+    width: 600px;          
+    z-index: 10;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+}
+
+.asset-tahun {
+    position: absolute;
+    top: -25px;
+    left: 830px;
+    right: 20px;
+    width: 300px;
+    transform-origin: top center;
+    animation: swingPhoto 6s ease-in-out infinite;
+}
+/* tahun */
+@keyframes swingPhoto { 
+    0%, 100% { transform: rotate(-9deg); } 
+    50% { transform: rotate(9deg); }
+}
+
+.main-about-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 80px;
+    gap: 50px;
+}
+
+.frame-sulawesi img { 
+    position: relative;
+    top: 160px;
+    left: -40px;
+    width: 510px; 
+    transform-origin: top;
+    animation: swingphotomantap 5s ease-in-out infinite;
+    filter: drop-shadow(15px 15px 25px rgba(0,0,0,0.6));
+}
+@keyframes swingphotomantap { 
+    0%, 100% { transform: rotate(-4deg); } 
+    50% { transform: rotate(4deg); }
+}
+
+.about-text {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: justify;
+    position: relative;
+    top: 120px;    
+    left: -60px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.about-text2 {
+    font-size: 1.15rem;
+    line-height: 1.7; 
+    text-align: justify;
+    text-justify: inter-word; 
+    width: 550px; 
+    max-width: 100%; 
+    padding: 0 10px; 
+    box-sizing: border-box; 
+    position: absolute;
+    top: 1180px;    
+    left: 70px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.about-text3 {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: justify;
+    text-justify: inter-word;
+    position: relative;
+    top: 375px;    
+    left: 670px;
+    transform: rotate(6deg);
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.asset-pesawat {
+    position: relative;    
+    display: block;        
+    top: -10px;           
+    left: 250px;          
+    width: 600px;          
+    margin-left: auto;     
+    margin-top: 40px;      
+    animation: floatBalon 4s ease-in-out infinite;
+    filter: drop-shadow(15px 15px 25px rgba(0,0,0,0.6));
+}
+
+.asset-fuel {
+    display: block;       
+    margin: 0 auto;       
+    position: absolute;   
+    top: 890px;            
+    left: 0;
+    right: 0;              
+    width: 500px;          
+    z-index: 10;          
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+}
+
+.asset-paul {
+    position: absolute; 
+    top: 550px;
+    left: -20px;
+    right: 0;
+    width: 31%;
+    z-index: 13;
+    cursor: pointer;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+    
+    /* Kondisi awal: Sembunyi */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* Class saat Paul "aktif" (muncul) */
+.asset-paul.active-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    animation: floatpaul 2s ease-in-out infinite; /* Tetap mengapung */
+}
+
+@keyframes floatpaul { 
+    0%, 100% { transform: translateY(10px); } 
+    50% { transform: translateY(-1px); }
+}
+
+/* --- ANIMASI SHAKE (BERHENTI SMOOTH KE AWAL) --- */
+@keyframes paulShake {
+    /* Bagian awal: Guncangan kuat */
+    0%   { transform: translate(1px, 1px) rotate(0deg); }
+    10%  { transform: translate(-1px, -2px) rotate(-1deg); }
+    20%  { transform: translate(-3px, 0px) rotate(1deg); }
+    30%  { transform: translate(3px, 2px) rotate(0deg); }
+    40%  { transform: translate(1px, -1px) rotate(1deg); }
+    
+    /* Bagian tengah: Guncangan mulai mengecil */
+    50%  { transform: translate(-1px, 2px) rotate(-1deg); }
+    60%  { transform: translate(-3px, 1px) rotate(0deg); }
+    
+    /* Bagian akhir: Hentikan guncangan dan kembali ke posisi dasar */
+    70%  { transform: translate(1px, 1px) rotate(-1deg); } /* Guncangan terakhir */
+    80%  { transform: translate(0px, 0px) rotate(0deg); } /* Guncangan BERHENTI di sini */
+    
+    /* Sisanya (80% - 100%): Transisi halus kembali ke posisi awal mengapung */
+    100% { transform: translateY(12px) rotate(0deg); } 
+}
+
+/* Class yang akan ditempelkan Javascript saat diklik */
+.asset-paul.shaking {
+    /* Jalankan animasi shake selama 0.8 detik, kuat di awal pelan di akhir */
+    animation: paulShake 0.8s ease-out !important; 
+    cursor: grabbing; /* Ubah kursor biar estetik */
+}
+
+.asset-panah {
+    position: absolute; 
+    top: 750px;
+    left: 250px;
+    right: 0px;
+    width: 10%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+}
+
+.asset-alaskaki  {
+    position: absolute; 
+    top: 980px;
+    left: 60px;
+    right: 0px;
+    width: 23%;
+    z-index: 12;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+}
+
+.asset-desain2 {
+    position: absolute; 
+    top: 909px;
+    left: -80px;
+    right: 0;
+    width: 115%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+.asset-kuliah {
+    position: absolute; 
+    top: 660px;
+    left: 400px;
+    width: 25%;
+    z-index: 12;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+    
+    /* --- EFEK MUNCUL SAAT SCROLL --- */
+    opacity: 0;
+    transform: translateY(10px) rotate(6deg); /* Muncul dari bawah & posisi miring */
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    pointer-events: none;
+}
+
+/* Class ini akan dipicu oleh JavaScript */
+.asset-kuliah.active-scroll {
+    opacity: 1;
+    transform: translateY(0) rotate(6deg); /* Berhenti tepat di kemiringan 6 derajat */
+    pointer-events: auto;
+}
+
+@keyframes swingPhotokuliah { 
+    0%, 100% { transform: rotate(6deg); } 
+    50% { transform: rotate(6deg); }
+}
+
+.asset-playlist {
+    position: absolute; 
+    top: 890px;
+    left: -80px;
+    right: 0;
+    width: 115%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.7)); 
+}
+
+.asset-vinyl {
+    position: absolute; 
+    top: 1160px;
+    left: 900px;
+    right: 0;
+    width: 10%;
+    z-index: -1;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+.asset-vinyl2 {
+    position: absolute; 
+    top: 1298px;
+    left: 734px;
+    right: 0;
+    width: 10%;
+    z-index: -1;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+.asset-cipgitar {
+    position: absolute; 
+    top: 1233px;
+    left: 840px;
+    right: 0;
+    width: 12%;
+    transform-origin: top left;
+    z-index: 21;
+    animation: swingPhotogitar 3s ease-in-out infinite;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+@keyframes swingPhotogitar { 
+    0%, 100% { transform: rotate(10deg); } 
+    50% { transform: rotate(4deg); }
+}
+
+.asset-paku {
+    position: absolute; 
+    top: 1223px;
+    left: 830px;
+    right: 0px;
+    width: 4%;
+    z-index: 22;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.3)); 
+}
+
+.future-design-area {
+    margin-top: 100px;
+    width: 100%;
+    min-height: 500px;
+}
+
+/* --- NAVIGASI MUSIK DI ABOUT --- */
+
+/* Tambahan: Pastikan semua icon musik bisa diklik dan ada di urutan terdepan */
+.asset-jeda1, .asset-jeda2, .asset-mulai1, .asset-mulai2 {
+    cursor: pointer;
+    z-index: 20 !important;
+}
+
+.asset-jeda1 {
+    position: absolute; 
+    top: 1150px;
+    left: 730px;
+    right: 0px;
+    width: 8%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+.asset-jeda2 {
+    position: absolute; 
+    top: 1370px;
+    left: 858px;
+    right: 0px;
+    width: 8%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+.asset-mulai1 {
+    position: absolute; 
+    top: 1150px;
+    left: 730px;
+    right: 0px;
+    width: 8%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+.asset-mulai2 {
+    position: absolute; 
+    top: 1370px;
+    left: 858px;
+    right: 0px;
+    width: 8%;
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.5)); 
+}
+
+/* --- ANIMASI VINYL BERPUTAR --- */
+@keyframes spinVinyl {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* 1. Pasang animasinya langsung di vinyl, tapi atur agar bawaannya 'paused' (jeda) */
+.asset-vinyl, .asset-vinyl2 {
+    animation: spinVinyl 3s linear infinite;
+    animation-play-state: paused; /* Ini kunci utamanya biar gak ke-reset */
+    transform-origin: center center;
+}
+
+/* 2. Saat class 'spinning' ditambahkan oleh Javascript, ubah state-nya jadi 'running' (jalan) */
+.spinning {
+    animation-play-state: running !important;
+}
+
+/* --- HALAMAN 3 --- */
+.asset-gear {
+    position: absolute; 
+    top: -10px;
+    left: 396px;
+    right: 0px;
+    width: 470px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-gangguspider {
+    position: absolute; 
+    top: 520px;
+    left: 1045px;
+    right: 0px;
+    width: 100px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-device {
+    position: absolute; 
+    top: 570px;
+    left: 350px;
+    right: 0px;
+    width: 450px;
+    transform: rotate(5deg);
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+    /* Kondisi awal: Sembunyi */
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* Class saat Device "aktif" (muncul saat scroll) */
+.asset-device.active-scroll {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.asset-laptop {
+    position: absolute; 
+    top: 540px;
+    left: 580px;
+    right: 0px;
+    width: 160px;
+    transform: rotate(8deg);
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* Class saat Device "aktif" (muncul saat scroll) */
+.asset-laptop.active-scroll {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.asset-craft {
+    position: absolute; 
+    top: 920px;
+    left: 392px;
+    right: 0px;
+    width: 490px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-hp {
+    position: absolute; 
+    top: 780px;
+    left: 450px;
+    right: 0px;
+    width: 160px;
+    transform: rotate(5deg);
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* Class saat Device "aktif" (muncul saat scroll) */
+.asset-hp.active-scroll {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.asset-aplikasiku {
+    position: absolute; 
+    top: 170px;
+    left: 15px;
+    right: 0px;
+    width: 635px;
+    transform-origin: top center;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+    animation: swingaplikasi 5s ease-in-out infinite; 
+}
+
+/* PORTOFOLIO HASIL KERJAKU MANTAP OKE */
+.asset-alight {
+    position: absolute; 
+    top: 1250px;
+    left: -40px;
+    right: 0px;
+    width: 500px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-vscode {
+    position: absolute; 
+    top: 5460px;
+    left: 255px;
+    right: 0px;
+    width: 1000px;
+    z-index: 25;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-canvalogo {
+    position: absolute; 
+    top: 1820px;
+    left: 856px;
+    right: 0px;
+    width: 400px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-logopremiere {
+    position: absolute; 
+    top: 3250px;
+    left: 20px;
+    right: 0px;
+    width: 250px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-logophotoshop {
+    position: absolute; 
+    top: 4000px;
+    left: 900px;
+    right: 0px;
+    width: 250px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-saclogo {
+    position: absolute; 
+    top: 4560px;
+    left: 120px;
+    right: 0px;
+    width: 80px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-canva1 {
+    position: absolute; 
+    top: 2300px;
+    left: 180px;
+    right: 0px;
+    width: 240px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-canva2 {
+    position: absolute; 
+    top: 2300px;
+    left: 515px;
+    right: 0px;
+    width: 240px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-canva3 {
+    position: absolute; 
+    top: 2300px;
+    left: 843px;
+    right: 0px;
+    width: 240px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-canva5 {
+    position: absolute; 
+    top: 2750px;
+    left: 350px;
+    right: 0px;
+    width: 240px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-photoshop1 {
+    position: absolute; 
+    top: 4210px;
+    left: 510px;
+    right: 0px;
+    width: 240px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-photoshop2 {
+    position: absolute; 
+    top: 4600px;
+    left: 680px;
+    right: 0px;
+    width: 440px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-photoshop3 {
+    position: absolute; 
+    top: 4600px;
+    left: 140px;
+    right: 0px;
+    width: 440px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-qrbuku {
+    position: absolute; 
+    top: 2880px;
+    left: 720px;
+    right: 0px;
+    width: 190px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-qrfilm {
+    position: absolute; 
+    top: 3710px;
+    left: 540px;
+    right: 0px;
+    width: 190px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-qraplikasi {
+    position: absolute; 
+    top: 4970px;
+    left: 537px;
+    right: 0px;
+    width: 190px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-coding1 {
+    position: absolute; 
+    top: 5500px;
+    left: -50px;
+    right: 0px;
+    width: 600px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-coding2 {
+    position: absolute; 
+    top: 5500px;
+    left: 330px;
+    right: 0px;
+    width: 600px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-coding3 {
+    position: absolute; 
+    top: 5500px;
+    left: 543px;
+    right: 0px;
+    width: 600px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+.asset-panahbuku {
+    position: absolute; 
+    top: 2950px;
+    left: 610px;
+    right: 0px;
+    rotate: -140deg;
+    width: 100px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+}
+
+/* SPIDERMAN AMAN */
+/* Pembungkus yang selalu berayun tanpa henti */
+.spiderman-wrapper {
+    position: absolute; 
+    top: 415px;
+    left: 782px;
+    width: 30%;
+    transform-origin: top center;
+    animation: swingspiderman 3s ease-in-out infinite;
+    z-index: 25;
+}
+
+.asset-spidermanaman {
+    width: 100%;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+    cursor: pointer;
+    display: block; /* Pastikan terlihat di awal */
+}
+
+.asset-spidermantakut {
+    width: 100%;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+    cursor: grabbing;
+    display: none; /* Sembunyi awal */
+}
+
+/* Getar halus di gambar takut */
+.shaking {
+    display: block !important;
+    animation: shakeSmooth 0.5s ease-in-out infinite !important;
+}
+
+/* Animasi ayun tunggal */
+@keyframes swingspiderman { 
+    0%, 100% { transform: rotate(7deg); } 
+    50% { transform: rotate(-7deg); }
+}
+
+@keyframes shakeSmooth {
+    0% { margin-left: 0px; }
+    20% { margin-left: 8px; }
+    40% { margin-left: -8px; }
+    60% { margin-left: 8px; }
+    80% { margin-left: -8px; }
+    100% { margin-left: 0px; }
+}
+
+.experience-textaplikasi {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    text-align: justify;
+    position: relative;
+    max-width: 600px;
+    top: 330px;    
+    left: 550px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.experience-textdevice {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 630px;    
+    left: 162px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+    opacity: 0;
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+    pointer-events: none;
+}
+
+/* Class saat Device "aktif" (muncul saat scroll) */
+.experience-textdevice.active-scroll {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.experience-penjelasanbuku {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 2789px;    
+    left: 660px;
+    width: 360px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.experience-penjelasanfilm {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 3590px;    
+    left: 423px;
+    width: 420px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.experience-penjelasanaplikasi {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 4855px;    
+    left: 330px;
+    width: 600px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.experience-penjelasanvscode {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 5355px;    
+    left: 330px;
+    width: 600px;
+    text-align: center;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.class-aplikasi1 {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 1200px;    
+    left: 557px;
+    letter-spacing: 2px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.class-aplikasi2 {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 2200px;    
+    left: 600px;
+    letter-spacing: 2px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.class-aplikasi3 {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 3250px;    
+    left: 520px;
+    letter-spacing: 2px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.class-aplikasi4 {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 4100px;    
+    left: 526px;
+    letter-spacing: 2px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.class-aplikasi5 {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 4700px;    
+    left: 608px;
+    letter-spacing: 2px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+.class-aplikasi6 {
+    flex: 1;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    position: absolute;
+    top: 5270px;    
+    left: 530px;
+    letter-spacing: 2px;
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+}
+
+/* Aturan Dasar untuk semua kotak video */
+.experience-video {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    border-radius: 12px;
+    overflow: hidden; 
+    filter: drop-shadow(5px 5px 3px rgba(0,0,0,0.2));
+    background-color: #000;
+}
+
+.experience-video video {
+    width: 100%;   
+    display: block;
+}
+
+/* --- ATUR POSISI DI SINI --- */
+
+.vid-box-1 {
+    top: 1310px;    
+    left: 700px;
+}
+
+.vid-box-2 {
+    top: 1610px;  /* Lebih bawah dari video 1 */
+    left: 170px;  /* Lebih ke kanan sedikit */
+}
+
+.vid-box-3 {
+    top: 1610px;  /* Lebih bawah lagi */
+    left: 700px;  /* Sejajar kembali dengan video 1 */
+}
+
+.vid-box-4 {
+    top: 1910px;  /* Lebih bawah lagi */
+    left: 170px;  /* Sejajar kembali dengan video 1 */
+}
+
+.vid-box-5 {
+    top: 3340px;  /* Lebih bawah lagi */
+    left: 428px;  /* Sejajar kembali dengan video 1 */
+}
+
+/* profil */
+@keyframes swingaplikasi { 
+    0%, 100% { transform: rotate(-3deg); } 
+    50% { transform: rotate(3deg); } 
+}
+
+/* --- NAVIGASI STYLE --- */
+.bottom-nav { 
+    display: flex; 
+    background-color: rgba(30, 30, 30, 0.7); 
+    border-radius: 50px; 
+    padding: 6px; 
+    backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    position: fixed; 
+    bottom: 25px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1000; 
+}
+
+.nav-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+    padding: 8px 22px; 
+    border-radius: 40px; 
+    text-decoration: none; 
+    color: #ffffff; 
+    font-size: 0.85rem; 
+    transition: 0.3s; 
+}
+
+.nav-item img { width: 18px; height: 18px; }
+.nav-item.active { background-color: white; color: black; }
+.nav-item.active img { filter: brightness(0); }
+
+/* --- RESPONSIVE MOBILE --- */
+@media (max-width: 768px) {
+    .profile-section { flex-direction: column; text-align: center; gap: 30px; margin-top: 10vh; }
+    .name { font-size: 2.2rem; }
+    .contact-item { justify-content: center; }
+    .main-about-content { flex-direction: column; align-items: center; }
+    .about-text, .frame-sulawesi { width: 100%; }
+}
